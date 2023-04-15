@@ -29,6 +29,7 @@ describe('main window tests', () => {
 		cy.get('li[data-testid="menu1"]').click()
 		.should('contain.html', '/text2image')
 
+		cy.get('button[data-testid="selectmenu"]').click()
 		cy.get('li[data-testid="menu2"]').click()
 		.should('contain.html', '/profile')
 	})
