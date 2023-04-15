@@ -1,0 +1,43 @@
+.text2Image {
+    height: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.image {
+    object-fit: cover;
+    margin: auto;
+    width: auto;
+    max-width: 768px;
+    height: auto;
+    max-height: 512px;
+}
+
+.imageSkeleton{
+    margin: auto;
+    width: auto;
+    max-width: 768px;
+    height: 512px;
+    max-height: 768px;
+}
+
+.leftForm {
+    display: block;
+    overflow-y: auto;
+    padding-right: 24px !important;
+}
+
+.leftFormHidden {
+    display: none;
+}
+
+.toggleButton {
+}
+
+.bottomForm {
+}
+
+.imageContent {
+    position: relative;
+    bottom: 0px;
+}

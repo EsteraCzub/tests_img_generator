@@ -1,0 +1,16 @@
+{
+  "done": 8,
+  "in_progress": 0,
+  "status": "success",
+  "tasks_done": [
+	"e0e5c673-2ba5-480d-a772-0de9c9dbf17c",
+	"44876e00-787b-40e5-9037-ae320952bf98",
+	"41ffe80b-1328-4d68-8036-347a28700db4",
+	"94195501-f695-44ba-8e80-d9ee2e9b7f03",
+	"be1fe2a8-fa64-4d13-b392-a908be1a83a2",
+	"1140b3c4-0c2e-42f1-b8ea-606e33d42834",
+	"443bca46-bd8c-45fc-9f88-655b10c24f8d",
+	"fb529b89-5594-4ad6-9830-0ad962b02a04"
+  ],
+  "tasks_in_progress": []
+}
