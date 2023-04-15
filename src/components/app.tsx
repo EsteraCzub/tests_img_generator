@@ -44,12 +44,12 @@ const App = () => {
 
     const menu = (
         <Menu mode="inline" selectedKeys={selectedMenuItem} onClick={handleMenuItemClick}>
-            <Menu.Item key="1">
+            <Menu.Item data-testid="menu1" key="1">
                 <Link to="/text2image">
                     Text 2 Image
                 </Link>
             </Menu.Item>
-            <Menu.Item key="3">
+            <Menu.Item data-testid="menu2" key="3">
                 <Link to="/profile">
                     Profile
                 </Link>
@@ -59,12 +59,12 @@ const App = () => {
 
     const leftMenu = selectedMenuItem === "1" ? (
         <Menu mode="inline">
-            <Menu.Item key="1" icon={<UserOutlined />}>
+            <Menu.Item data-testid="leftmenu1" key="1" icon={<UserOutlined />}>
                 <Link to="/text2image">
                     Text 2 Image
                 </Link>
             </Menu.Item>
-            <Menu.Item key="2" icon={<UserOutlined />}>
+            <Menu.Item data-testid="leftmenu2" key="2" icon={<UserOutlined />}>
                 <Link to="/history">
                     History
                 </Link>
@@ -100,7 +100,7 @@ const App = () => {
                         <Header className="app-header">
                             <Row justify="space-between">
                                 <Col span="4">
-                                    <Button onClick={handleDrawerOpen}>
+                                    <Button data-testid="selectmenu" onClick={handleDrawerOpen}>
                                         <MenuOutlined /> Select Module
                                     </Button>
                                 </Col>
@@ -140,7 +140,7 @@ const App = () => {
                         <Footer>
                             <Row justify="end" align="middle">
                                 <Col>
-                                    <Switch checked={layoutTheme === 'dark'} onChange={handleThemeChange} />
+                                    <Switch data-testid="switch" checked={layoutTheme === 'dark'} onChange={handleThemeChange} />
                                 </Col>
                             </Row>
                         </Footer>
