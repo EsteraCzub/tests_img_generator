@@ -141,8 +141,8 @@ const History: React.FunctionComponent = () => {
                 />
 
                 {enlargedImageUrl && (
-                    <div className={style.enlargedImageContainer} onClick={handleEnlargedImageClick}>
-                        <img src={enlargedImageUrl.imageSrc} />
+                    <div className={style.enlargedImageContainer} data-testid={'imgdiv'} onClick={handleEnlargedImageClick}>
+                        <img src={enlargedImageUrl.imageSrc} data-testid={'openimg'}/>
                         <Descriptions className={style.imageDescription} size="default" layout="vertical" bordered
                                       column={{xxl: 8, xl: 8, lg: 6, md: 6, sm: 2, xs: 2}}
                         >
