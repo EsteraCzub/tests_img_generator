@@ -204,17 +204,18 @@ const Text2Image: React.FunctionComponent = () => {
                              align="bottom">
                             <Col span={20}>
                                 <Form.Item
+                                    
                                     label="Prompt"
                                     name="prompt"
                                     tooltip={POP_PROMPT}
                                     rules={[{required: true, message: 'Please input prompt!'}]}
                                 >
-                                    <TextArea rows={3} disabled={isLoading} />
+                                    <TextArea data-testid="prompt" rows={3} disabled={isLoading} />
                                 </Form.Item>
                             </Col>
                             <Col span={4}>
                                 <Form.Item>
-                                    <Button type="default" htmlType="submit" disabled={isLoading}>
+                                    <Button data-testid="createbutton" type="default" htmlType="submit" disabled={isLoading}>
                                         Create
                                     </Button>
                                 </Form.Item>
@@ -229,7 +230,7 @@ const Text2Image: React.FunctionComponent = () => {
                     <Col span={showColumn ? 8 : 0} className={showColumn ? style.leftForm : style.leftFormHidden}>
 
                         <Form.Item label="Mode" name="mode">
-                            <Select disabled={isLoading}
+                            <Select data-testid="mode" disabled={isLoading}
                                     options={[
                                         {value: 'stable_tf', label: 'Stable diffusion TF'},
                                         {value: 'stable', label: 'Stable diffusion 1.4'},
@@ -237,7 +238,7 @@ const Text2Image: React.FunctionComponent = () => {
                                     ]}
                              />
                         </Form.Item> <Form.Item label="Model" name="model">
-                        <Select disabled={isLoading}
+                        <Select data-testid="model" disabled={isLoading}
                                 options={[
                                     {value: '', label: ''},
                                 ]}
@@ -251,11 +252,12 @@ const Text2Image: React.FunctionComponent = () => {
                             rules={[{required: false, message: 'Please input prompt!'}]}
 
                         >
-                            <TextArea rows={2} disabled={isLoading} />
+                            <TextArea data-testid="negative" rows={2} disabled={isLoading} />
                         </Form.Item>
 
                         <Form.Item label="Image size" name="image_size">
-                            <Select disabled={isLoading}
+                            <Select data-testid="imagesize"
+                                    disabled={isLoading}
                                     options={[
                                         {value: '896x896', label: '896x896'},
                                         {value: '768x768', label: '768x768'},
@@ -283,7 +285,7 @@ const Text2Image: React.FunctionComponent = () => {
                              />
                         </Form.Item>
 
-                        <Form.Item name="steps" label="Steps">
+                        <Form.Item  data-testid="steps" name="steps" label="Steps">
                             <Slider disabled={isLoading}
                                     range={false}
                                     step={1}
@@ -293,7 +295,7 @@ const Text2Image: React.FunctionComponent = () => {
                             />
                         </Form.Item>
 
-                        <Form.Item name="guidance_scale" label="Guidance scale" tooltip={POP_GS}>
+                        <Form.Item data-testid="guidancescale" name="guidance_scale" label="Guidance scale" tooltip={POP_GS}>
                             <Slider disabled={isLoading}
                                     range={false}
                                     step={0.1}
@@ -321,13 +323,13 @@ const Text2Image: React.FunctionComponent = () => {
                                     tooltip={POP_SEED}
                                     style={{display: 'inline-block', width: 'calc(80% - 8px)'}}
                                 >
-                                    <Input disabled={isLoading || randomSeed} />
+                                    <Input data-testid="seed" disabled={isLoading || randomSeed} />
                                 </Form.Item>
                                 <Form.Item
                                     name="randomSeed"
                                     style={{display: 'inline-block', width: 'calc(20% - 8px)', margin: '0 8px'}}
                                 >
-                                    <Switch disabled={isLoading} checked={randomSeed}
+                                    <Switch data-testid="seedswitch" disabled={isLoading} checked={randomSeed}
                                             onClick={handleSwitchRandom} />
                                 </Form.Item>
                             </Input.Group>
