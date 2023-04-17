@@ -22,7 +22,7 @@ const Profile: FunctionalComponent<Props> = ({user}: Props): any => {
 
             <Row gutter={[16, 16]}>
                 <Col span={8}>
-                    <Card>
+                    <Card data-testid={'user'}>
                         <Meta
                             avatar={<Avatar icon={<UserOutlined />} />}
                             title={user}
@@ -30,26 +30,26 @@ const Profile: FunctionalComponent<Props> = ({user}: Props): any => {
                         />
                     </Card>
                 </Col>
-                <Col span={8}>
+                <Col span={8} data-testid={'followers'}>
                     <Statistic title="Followers" value={123} />
                 </Col>
-                <Col span={8}>
+                <Col span={8} data-testid={'following'}>
                     <Statistic title="Following" value={456} />
                 </Col>
             </Row>
             <Divider />
             <Card>
-                <p>Email: john.doe@example.com</p>
-                <p>Phone: +1 555-1234</p>
-                <p>Address: 123 Main St, Anytown, USA</p>
+                <p data-testid={'email'}>Email: john.doe@example.com</p>
+                <p data-testid={'phone'}>Phone: +1 555-1234</p>
+                <p data-testid={'address'}>Address: 123 Main St, Anytown, USA</p>
             </Card>
             <Divider />
-            <Card>
-                <button onClick={() => setCount(count => count + 1)}>Click Me</button>
+            <Card data-testid={'clickcount'}>
+                <button data-testid={'clickbutton'} onClick={() => setCount(count => count + 1)}>Click Me</button>
                 {' '}Clicked {count} times.
             </Card>
             <Divider />
-            <Card>
+            <Card data-testid={'timer'}>
                 Current time: {new Date(time).toLocaleString()}
             </Card>
         </div>
