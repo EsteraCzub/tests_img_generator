@@ -177,8 +177,8 @@ const Text2Image: React.FunctionComponent = () => {
                 <Row gutter={[16, 16]}>
                     <Col span={showColumn ? 15 : 23}>
 
-                        {message && <Alert type="info" message={message} banner />}
-                        {error && <Alert type="error" message={error} banner />}
+                        {message && <Alert data-testid="alertmessage" type="info" message={message} banner />}
+                        {error && <Alert data-testid="alerterror" type="error" message={error} banner />}
 
                         <Row justify="space-between" align="middle" gutter={[16, 16]} className={style.imageContent}>
                             <Col span={24} style={{textAlign: "center"}}>
