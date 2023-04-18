@@ -66,7 +66,7 @@ describe('profile', () => {
 		const dayjs = require('dayjs')
 
 		const currentDate = dayjs().format('DD.MM.YYYY')
-		const currentTime = dayjs().format('hh:mm:ss')
+		const currentTime = dayjs().format('HH:mm:ss')
 		
 		cy.get('div[data-testid="timer"] > .ant-card-body')
 			.should('contain.text', 'Current time: ')
