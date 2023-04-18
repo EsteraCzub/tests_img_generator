@@ -285,7 +285,7 @@ const Text2Image: React.FunctionComponent = () => {
                              />
                         </Form.Item>
 
-                        <Form.Item  data-testid="steps" name="steps" label="Steps">
+                        <Form.Item data-testid="steps" name="steps" label="Steps">
                             <Slider disabled={isLoading}
                                     range={false}
                                     step={1}

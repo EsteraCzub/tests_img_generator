@@ -25,12 +25,12 @@ describe('text2image module', () => {
 			.next()
 			.should('have.text', '512x512')
 
-		cy.get('div[data-testid="steps"] > .ant-form-item-control > .ant-form-item-control-input > .ant-form-item-control-input-content > .ant-slider')
-			.children('.ant-slider-handle')
+		cy.get('div[data-testid="steps"]')
+			.find('.ant-slider-handle')
 			.should('have.attr', 'aria-valuenow', '10')
 
-		cy.get('div[data-testid="guidanceScale"] > .ant-form-item-control > .ant-form-item-control-input > .ant-form-item-control-input-content > .ant-slider')
-			.children('.ant-slider-handle')
+		cy.get('div[data-testid="guidanceScale"]')
+			.find('.ant-slider-handle')
 			.should('have.attr', 'aria-valuenow', '7.5')
 
 		cy.get('input[data-testid="seed"]')
