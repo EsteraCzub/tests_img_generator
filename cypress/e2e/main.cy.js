@@ -14,22 +14,22 @@ describe('main window tests', () => {
 	})
 
 	it('test the left menu', () => {
-		cy.get('li[data-testid="leftmenu1"]').click()
+		cy.get('li[data-testid="leftMenu1"]').click()
 		.should('contain.html', '/text2image')
 
-		cy.get('li[data-testid="leftmenu2"]').click()
+		cy.get('li[data-testid="leftMenu2"]').click()
 		.should('contain.html', '/history')
 	})
 
 	it('test the sidebar menu', () => {
-		cy.get('button[data-testid="selectmenu"]').click()
+		cy.get('button[data-testid="selectMenu"]').click()
 		cy.get('.ant-drawer-wrapper-body')
 		.should('not.have.class', 'ant-drawer-content-wrapper-hidden')
 
 		cy.get('li[data-testid="menu1"]').click()
 		.should('contain.html', '/text2image')
 
-		cy.get('button[data-testid="selectmenu"]').click()
+		cy.get('button[data-testid="selectMenu"]').click()
 		cy.get('li[data-testid="menu2"]').click()
 		.should('contain.html', '/profile')
 	})
@@ -41,7 +41,7 @@ describe('main window tests', () => {
 		cy.get('input[id="username"]').type('Test Testerski')
 		cy.get('input[id="password"]').type('bardzoBezpieczneHasło123!')
 
-		cy.get('button[data-testid="loginbutton"]').click()
+		cy.get('button[data-testid="loginButton"]').click()
 
 		cy.get('li[data-testid="logout"]').should('be.visible')
 	})
@@ -64,7 +64,7 @@ describe('main window tests', () => {
 		cy.get('input[id="username"]').type('Test Testerski')
 		cy.get('input[id="password"]').type('bardzoBezpieczneHasło123!')
 
-		cy.get('button[data-testid="registerbutton"]').click()
+		cy.get('button[data-testid="registerButton"]').click()
 
 		cy.get('li[data-testid="logout"]').should('be.visible')
 	})

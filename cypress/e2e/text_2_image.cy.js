@@ -20,7 +20,7 @@ describe('text2image module', () => {
 		cy.get('textarea[data-testid="negative"]')
 			.should('not.contain.text')
 
-		cy.get('div[data-testid="imagesize"] > .ant-select-selector')
+		cy.get('div[data-testid="imageSize"] > .ant-select-selector')
 			.children()
 			.next()
 			.should('have.text', '512x512')
@@ -29,14 +29,14 @@ describe('text2image module', () => {
 			.children('.ant-slider-handle')
 			.should('have.attr', 'aria-valuenow', '10')
 
-		cy.get('div[data-testid="guidancescale"] > .ant-form-item-control > .ant-form-item-control-input > .ant-form-item-control-input-content > .ant-slider')
+		cy.get('div[data-testid="guidanceScale"] > .ant-form-item-control > .ant-form-item-control-input > .ant-form-item-control-input-content > .ant-slider')
 			.children('.ant-slider-handle')
 			.should('have.attr', 'aria-valuenow', '7.5')
 
 		cy.get('input[data-testid="seed"]')
 			.should('have.attr', 'disabled')
 
-		cy.get('button[data-testid="seedswitch"]').click()
+		cy.get('button[data-testid="seedSwitch"]').click()
 
 		cy.get('input[data-testid="seed"]')
 			.should('not.have.attr', 'disabled')
@@ -53,14 +53,14 @@ describe('text2image module', () => {
 			.clear()
 			.type('Forest with fog and rais of the sun')
 
-		cy.get('button[data-testid="seedswitch"]')
+		cy.get('button[data-testid="seedSwitch"]')
 			.click()
 
 		cy.get('input[data-testid="seed"]')
 			.clear()
 			.type('111222333')
 	 
-		cy.get('button[data-testid="createbutton"]')
+		cy.get('button[data-testid="createButton"]')
 		   .click()
 	 
 		cy.wait('@getAddTask')
@@ -84,7 +84,7 @@ describe('text2image module', () => {
 			.clear()
 			.type('Forest with fog and rais of the sun')
 
-		cy.get('button[data-testid="seedswitch"]')
+		cy.get('button[data-testid="seedSwitch"]')
 			.click()
 
 		cy.get('input[data-testid="seed"]')
@@ -100,10 +100,10 @@ describe('text2image module', () => {
 			}
 		).as('getAddTaskWith500')
 			   
-		cy.get('button[data-testid="createbutton"]')
+		cy.get('button[data-testid="createButton"]')
 		   .click()
 		
-		cy.get('div[data-testid="alerterror"]')
+		cy.get('div[data-testid="alertError"]')
 		   .should('be.visible')
 		   .children()
 		   .next()

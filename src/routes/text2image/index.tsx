@@ -177,8 +177,8 @@ const Text2Image: React.FunctionComponent = () => {
                 <Row gutter={[16, 16]}>
                     <Col span={showColumn ? 15 : 23}>
 
-                        {message && <Alert data-testid="alertmessage" type="info" message={message} banner />}
-                        {error && <Alert data-testid="alerterror" type="error" message={error} banner />}
+                        {message && <Alert data-testid="alertMessage" type="info" message={message} banner />}
+                        {error && <Alert data-testid="alertError" type="error" message={error} banner />}
 
                         <Row justify="space-between" align="middle" gutter={[16, 16]} className={style.imageContent}>
                             <Col span={24} style={{textAlign: "center"}}>
@@ -215,7 +215,7 @@ const Text2Image: React.FunctionComponent = () => {
                             </Col>
                             <Col span={4}>
                                 <Form.Item>
-                                    <Button data-testid="createbutton" type="default" htmlType="submit" disabled={isLoading}>
+                                    <Button data-testid="createButton" type="default" htmlType="submit" disabled={isLoading}>
                                         Create
                                     </Button>
                                 </Form.Item>
@@ -256,7 +256,7 @@ const Text2Image: React.FunctionComponent = () => {
                         </Form.Item>
 
                         <Form.Item label="Image size" name="image_size">
-                            <Select data-testid="imagesize"
+                            <Select data-testid="imageSize"
                                     disabled={isLoading}
                                     options={[
                                         {value: '896x896', label: '896x896'},
@@ -295,7 +295,7 @@ const Text2Image: React.FunctionComponent = () => {
                             />
                         </Form.Item>
 
-                        <Form.Item data-testid="guidancescale" name="guidance_scale" label="Guidance scale" tooltip={POP_GS}>
+                        <Form.Item data-testid="guidanceScale" name="guidance_scale" label="Guidance scale" tooltip={POP_GS}>
                             <Slider disabled={isLoading}
                                     range={false}
                                     step={0.1}
@@ -329,7 +329,7 @@ const Text2Image: React.FunctionComponent = () => {
                                     name="randomSeed"
                                     style={{display: 'inline-block', width: 'calc(20% - 8px)', margin: '0 8px'}}
                                 >
-                                    <Switch data-testid="seedswitch" disabled={isLoading} checked={randomSeed}
+                                    <Switch data-testid="seedSwitch" disabled={isLoading} checked={randomSeed}
                                             onClick={handleSwitchRandom} />
                                 </Form.Item>
                             </Input.Group>

@@ -59,12 +59,12 @@ const App = () => {
 
     const leftMenu = selectedMenuItem === "1" ? (
         <Menu mode="inline">
-            <Menu.Item data-testid="leftmenu1" key="1" icon={<UserOutlined />}>
+            <Menu.Item data-testid="leftMenu1" key="1" icon={<UserOutlined />}>
                 <Link to="/text2image">
                     Text 2 Image
                 </Link>
             </Menu.Item>
-            <Menu.Item data-testid="leftmenu2" key="2" icon={<UserOutlined />}>
+            <Menu.Item data-testid="leftMenu2" key="2" icon={<UserOutlined />}>
                 <Link to="/history">
                     History
                 </Link>
@@ -100,7 +100,7 @@ const App = () => {
                         <Header className="app-header">
                             <Row justify="space-between">
                                 <Col span="4">
-                                    <Button data-testid="selectmenu" onClick={handleDrawerOpen}>
+                                    <Button data-testid="selectMenu" onClick={handleDrawerOpen}>
                                         <MenuOutlined /> Select Module
                                     </Button>
                                 </Col>

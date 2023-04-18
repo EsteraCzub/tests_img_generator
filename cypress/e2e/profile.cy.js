@@ -53,12 +53,12 @@ describe('profile', () => {
 	})
 
 	it('check click', () => {
-		cy.get('div[data-testid="clickcount"] > .ant-card-body')
+		cy.get('div[data-testid="clickCount"] > .ant-card-body')
 		.should('contain.text', 'Clicked 10 times')
 
-		cy.get('button[data-testid="clickbutton"]').click()
+		cy.get('button[data-testid="clickButton"]').click()
 
-		cy.get('div[data-testid="clickcount"] > .ant-card-body')
+		cy.get('div[data-testid="clickCount"] > .ant-card-body')
 		.should('contain.text', 'Clicked 11 times')
 	})
 

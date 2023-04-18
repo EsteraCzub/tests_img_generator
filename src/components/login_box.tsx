@@ -95,7 +95,7 @@ function LoginBox() {
                             <Input.Password placeholder="Password"/>
                         </Form.Item>
                         <Form.Item>
-                            <Button data-testid="loginbutton" type="primary" htmlType="submit">
+                            <Button data-testid="loginButton" type="primary" htmlType="submit">
                                 Login
                             </Button>
                         </Form.Item>
@@ -121,7 +121,7 @@ function LoginBox() {
                             <Input.Password placeholder="Password"/>
                         </Form.Item>
                         <Form.Item>
-                            <Button data-testid="registerbutton" type="primary" htmlType="submit">
+                            <Button data-testid="registerButton" type="primary" htmlType="submit">
                                 Register
                             </Button>
                         </Form.Item>

@@ -44,8 +44,8 @@ const Profile: FunctionalComponent<Props> = ({user}: Props): any => {
                 <p data-testid={'address'}>Address: 123 Main St, Anytown, USA</p>
             </Card>
             <Divider />
-            <Card data-testid={'clickcount'}>
-                <button data-testid={'clickbutton'} onClick={() => setCount(count => count + 1)}>Click Me</button>
+            <Card data-testid={'clickCount'}>
+                <button data-testid={'clickButton'} onClick={() => setCount(count => count + 1)}>Click Me</button>
                 {' '}Clicked {count} times.
             </Card>
             <Divider />
