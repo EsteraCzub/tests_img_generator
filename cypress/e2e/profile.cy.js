@@ -7,16 +7,16 @@ describe('profile', () => {
 	})
 
 	it('check user', () => {
-		cy.get('div[data-testid="user"] > .ant-card-body > .ant-card-meta > .ant-card-meta-avatar')
+		cy.get('div[data-testid="user"] > .ant-card-meta-avatar')
 			.children()
 			.should('have.class', 'ant-avatar-icon')
 
-		cy.get('div[data-testid="user"] > .ant-card-body > .ant-card-meta > .ant-card-meta-detail')
+		cy.get('div[data-testid="user"] > .ant-card-meta-detail')
 			.children()
 			.first()
 			.should('have.text', 'me')
 
-		cy.get('div[data-testid="user"] > .ant-card-body > .ant-card-meta > .ant-card-meta-detail')
+		cy.get('div[data-testid="user"] > .ant-card-meta-detail')
 			.children()
 			.first()
 			.next()
