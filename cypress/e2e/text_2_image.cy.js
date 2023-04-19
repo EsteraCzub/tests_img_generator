@@ -1,9 +1,9 @@
-import {mockDefaultRoutes} from "../support/mock";
+import {mockDefaultRoutes, TEST_HOST} from "../support/mock";
 
 describe('text2image module', () => {
 	beforeEach(() => {
 		mockDefaultRoutes()
-		cy.visit('http://localhost:8080/text2image')
+		cy.visit(TEST_HOST + 'text2image')
 	})
 
 	it('disaplay text 2 image form', () => {
@@ -47,7 +47,7 @@ describe('text2image module', () => {
 
 		cy.get('textarea[data-testid="negative"]')
 		   .clear()
-		   .type('No decidous trees')
+		   .type('No deciduous trees')
 		
 		cy.get('textarea[data-testid="prompt"]')
 			.clear()
@@ -67,7 +67,7 @@ describe('text2image module', () => {
 		   .should(({request, response}) => {
 			  const req = request.body
 			  expect(req.prompt).equal('Forest with fog and rais of the sun')
-			  expect(req.negative).equal('No decidous trees')
+			  expect(req.negative).equal('No deciduous trees')
 			  expect(req.seed).equal('111222333')
 		   })		
 	})
@@ -78,7 +78,7 @@ describe('text2image module', () => {
 
 		cy.get('textarea[data-testid="negative"]')
 			.clear()
-			.type('No decidous trees')
+			.type('No deciduous trees')
 		
 		cy.get('textarea[data-testid="prompt"]')
 			.clear()

@@ -1,10 +1,11 @@
-import {mockDefaultRoutes} from "../support/mock";
+import {mockDefaultRoutes, TEST_HOST} from "../support/mock";
+
 
 describe('main window tests', () => {
 	beforeEach(() => {
 		mockDefaultRoutes()
 		cy.viewport('macbook-13')
-		cy.visit('http://localhost:8080/')
+		cy.visit(TEST_HOST)
 	})
 
 	it('test switch theme', () => {

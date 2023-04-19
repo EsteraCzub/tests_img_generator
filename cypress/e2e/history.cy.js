@@ -1,14 +1,20 @@
-import {mockDefaultRoutes} from "../support/mock";
+import {mockDefaultRoutes, TEST_HOST} from "../support/mock";
 
 describe('history module', () => {
 	beforeEach(() => {
 		mockDefaultRoutes()
-		cy.visit('http://localhost:8080/history')
+		cy.visit(TEST_HOST + 'history')
 	})
 
 	it('display the history', () => {
-		cy.get('div')
-			.should('have.class', 'ant-list-split')
+		cy.get('div[data-testid="imgList"]')
+			.should('be.visible')
+
+		cy.get('div[data-testid="imgList"]')
+			.find('img')
+			.should(($img) => {
+				expect($img).to.have.length(8)
+		})
 	})
 
 	it('display details on the image', () => {
@@ -16,7 +22,7 @@ describe('history module', () => {
 			.first()
 			.click()
 
-		cy.get('div[data-testid="imgDiv"]')
+		cy.get('div[data-testid="openImgDiv"]')
 			.should('be.visible')
 
 		cy.get('img[data-testid="openImg"]')
@@ -42,7 +48,7 @@ describe('history module', () => {
 		cy.get(':nth-child(4) > :nth-child(5) > span')
 			.should('have.text', 'stable_tf')
 
-		cy.get('div[data-testid="imgDiv"]').click()
+		cy.get('div[data-testid="openImgDiv"]').click()
 	})
 
 })

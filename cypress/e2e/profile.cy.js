@@ -1,9 +1,9 @@
-import {mockDefaultRoutes} from "../support/mock";
+import {mockDefaultRoutes, TEST_HOST} from "../support/mock";
 
 describe('profile', () => {
 	beforeEach(() => {
 		mockDefaultRoutes()
-		cy.visit('http://localhost:8080/profile')
+		cy.visit(TEST_HOST + 'profile')
 	})
 
 	it('check user', () => {
