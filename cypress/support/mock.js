@@ -1,3 +1,5 @@
+export const TEST_HOST = 'http://localhost:8080/';
+
 export const mockDefaultRoutes = () => {
 	cy.intercept(
 		'GET',

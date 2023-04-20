@@ -126,7 +126,7 @@ const History: React.FunctionComponent = () => {
     );
 
     return (
-        <div>
+        <div data-testid="imgList">
             {message && <Alert type="info" message={message} banner />}
             {error && <Alert type="error" message={error} banner />}
             <div onScroll={handleScroll} onWheel={handleWheel}
@@ -141,8 +141,8 @@ const History: React.FunctionComponent = () => {
                 />
 
                 {enlargedImageUrl && (
-                    <div className={style.enlargedImageContainer} onClick={handleEnlargedImageClick}>
-                        <img src={enlargedImageUrl.imageSrc} />
+                    <div className={style.enlargedImageContainer} data-testid={'openImgDiv'} onClick={handleEnlargedImageClick}>
+                        <img src={enlargedImageUrl.imageSrc} data-testid={'openImg'}/>
                         <Descriptions className={style.imageDescription} size="default" layout="vertical" bordered
                                       column={{xxl: 8, xl: 8, lg: 6, md: 6, sm: 2, xs: 2}}
                         >

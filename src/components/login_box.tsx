@@ -53,7 +53,7 @@ function LoginBox() {
     const layout = loggedIn ? (
         <Header className="header">
             <Menu theme="dark" mode="horizontal" defaultSelectedKeys={['1']}>
-                <Menu.Item key="2" onClick={handleLogout}>
+                <Menu.Item key="2" onClick={handleLogout} data-testid="logout">
                     <LogoutOutlined/> Logout
                 </Menu.Item>
             </Menu>
@@ -61,10 +61,10 @@ function LoginBox() {
     ) : (
         <Header className="header">
             <Menu theme="dark" mode="horizontal">
-                <Menu.Item key="1" onClick={showLoginModal}>
+                <Menu.Item data-testid="login" key="1" onClick={showLoginModal}>
                     Login
                 </Menu.Item>
-                <Menu.Item key="2" onClick={showRegisterModal}>
+                <Menu.Item data-testid="register" key="2" onClick={showRegisterModal}>
                     Register
                 </Menu.Item>
             </Menu>
@@ -95,7 +95,7 @@ function LoginBox() {
                             <Input.Password placeholder="Password"/>
                         </Form.Item>
                         <Form.Item>
-                            <Button type="primary" htmlType="submit">
+                            <Button data-testid="loginButton" type="primary" htmlType="submit">
                                 Login
                             </Button>
                         </Form.Item>
@@ -121,7 +121,7 @@ function LoginBox() {
                             <Input.Password placeholder="Password"/>
                         </Form.Item>
                         <Form.Item>
-                            <Button type="primary" htmlType="submit">
+                            <Button data-testid="registerButton" type="primary" htmlType="submit">
                                 Register
                             </Button>
                         </Form.Item>
